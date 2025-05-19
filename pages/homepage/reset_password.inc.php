@@ -1,56 +1,31 @@
-<?php
+<div class="pass_rec">
+  <span style="display: inline-block"><?php echo gdrcd_filter('out', $MESSAGE['homepage']['forms']['forgot']); ?></span>
+  
+  <form id="passRecoveryForm">
+    <input type="text" id="passrecovery" name="email" placeholder="email"/>
+    <div id="feedback_box" style="margin-top:10px;color:red;"></div>
+    <input type="submit" value="<?php echo $MESSAGE['homepage']['forms']['new_pass']; ?>"/>
+  </form>
+</div>
 
-/*
- * Procedura di recupero Password
- */
-// Inizializzo le variabili dell'operazione
-$feedback = '';
+<script>
+  document.getElementById('passRecoveryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-if ( ! empty($_POST['email'])) {
-    // Ottengo TUTTI i Personaggi presenti in gioco
-    $result = gdrcd_query("SELECT nome, email FROM personaggio", 'result');
+    const email = document.getElementById('passrecovery').value;
 
-    // Scorro i personaggi presenti in gioco
-    while($row = gdrcd_query($result, 'assoc')) {
-        // Controllo la corrispondenza con la password
-        if (gdrcd_password_check($_POST['email'], $row['email'])) {
-            $pass = gdrcd_genera_pass();
-            // Aggiorno il personaggio con la nuova password
-            $hasReset = gdrcd_query("UPDATE personaggio SET pass = '" . gdrcd_encript($pass) . "' WHERE nome = '" .gdrcd_filter('in', $row['nome']). "' LIMIT 1");
-
-            // Se il reset della password è stata eseguita con successo, procedo con l'invio mail
-            if($hasReset) {
-                // Inizializzo i parametri per l'invio della mail
-                $subject = gdrcd_filter('out',$MESSAGE['register']['forms']['mail']['sub'] . ' ' . $PARAMETERS['info']['site_name']);
-                $text = gdrcd_filter('out', $MESSAGE['register']['forms']['mail']['text'] . ': ' . $pass);
-
-                // Tento l'invio della mail
-                $hasEmailSent = mail($_POST['email'], $subject, $text, 'From: ' . $PARAMETERS['info']['webmaster_email']);
-                // Aggiorno il feedback
-                if($hasEmailSent) {
-                    $feedback = gdrcd_filter('out', $MESSAGE['warning']['modified']);
-                }
-
-            }
-            // Altrimenti segnalo l'errore
-            else {
-                // Aggiorno il feedback
-                $feedback = gdrcd_filter('out', $MESSAGE['warning']['cant_do']);
-            }
-        }
-    }
-}
-/*
- * Fine Recupero Password
- */
-
-?>
-
-    <div class="pass_rec"><span style="display: inline-block"><?php echo gdrcd_filter('out', $MESSAGE['homepage']['forms']['forgot']); ?></span>
-      <form action="index.php" method="post"> <input type="text" id="passrecovery" name="email" placeholder="email"/>
-            <?=$feedback?>
-            <input type="submit" value="<?php echo $MESSAGE['homepage']['forms']['new_pass']; ?>"/>
-        </form>
-           
-            
-    </div>
+    fetch('pages/homepage/reset_password_action.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: 'email=' + encodeURIComponent(email)
+    })
+    .then(response => response.text())
+    .then(feedback => {
+      document.getElementById('feedback_box').innerHTML = feedback;
+     
+      if (feedback.includes('modificata') || feedback.includes('inviata')) {
+        closeModalWindow('scheda_reset');
+      }
+    });
+  });
+</script>

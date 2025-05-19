@@ -30,3 +30,9 @@ function modalWindow(name, title, url, width, height) {
         }
     });
 }
+
+function closeModalWindow(name) {
+    if (top.$('#dialog-' + name).length > 0) {
+        top.$('#dialog-' + name).dialog('close');
+    }
+}

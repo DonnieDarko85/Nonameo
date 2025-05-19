@@ -17,6 +17,7 @@ $users = gdrcd_query("SELECT COUNT(nome) AS online FROM personaggio WHERE ora_en
 
 
 ?>
+
 <div id="main">
     <div id="site_width">
 <div class="contenitore">
@@ -33,11 +34,11 @@ $users = gdrcd_query("SELECT COUNT(nome) AS online FROM personaggio WHERE ora_en
                     <li>
                         <a href="javascript:modalWindow('scheda_amb', 'Ambientazione', 'popup-est.php?page=user_ambientazione')"><?php echo $MESSAGE['homepage']['storyline']; ?></a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="javascript:modalWindow('scheda_raz', 'Razze', 'popup-est.php?page=user_razze')"><?php echo $MESSAGE['homepage']['races']; ?></a>
-                    </li>
+                    </li>-->
                     <li>
-                        <a href="javascript:modalWindow('scheda_reset', 'Reset', 'popup-est.php?page=reset_password')"><?php echo $MESSAGE['homepage']['resetPwd']; ?></a>
+                        <a href="javascript:modalWindow('scheda_reset', 'Reset', 'popup-est.php?page=reset_password')"><?php echo $MESSAGE['homepage']['reset']; ?></a>
                     </li>
                 </ul>
         <div class="side_modules">
@@ -102,4 +103,3 @@ $users = gdrcd_query("SELECT COUNT(nome) AS online FROM personaggio WHERE ora_en
         </div>
  </div>
     </div>
-
