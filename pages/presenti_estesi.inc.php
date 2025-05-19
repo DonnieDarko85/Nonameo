@@ -79,7 +79,6 @@
             //Entrata, uscita PG
             //Controllo da quanto il pg e' loggato
 
-
             $activity = gdrcd_check_time($record['ora_entrata']);
 
             //Se e' loggato da meno di 2 minuti
