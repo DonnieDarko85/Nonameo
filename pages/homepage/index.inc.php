@@ -36,6 +36,9 @@ $users = gdrcd_query("SELECT COUNT(nome) AS online FROM personaggio WHERE ora_en
                     <li>
                         <a href="javascript:modalWindow('scheda_raz', 'Razze', 'popup-est.php?page=user_razze')"><?php echo $MESSAGE['homepage']['races']; ?></a>
                     </li>
+                    <li>
+                        <a href="javascript:modalWindow('scheda_reset', 'Reset', 'popup-est.php?page=reset_password')"><?php echo $MESSAGE['homepage']['resetPwd']; ?></a>
+                    </li>
                 </ul>
         <div class="side_modules">
                     <?php
