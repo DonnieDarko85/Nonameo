@@ -20,7 +20,7 @@ if (!empty($_POST['email'])) {
                 $hasEmailSent = mail($_POST['email'], $subject, $text, 'From: ' . $PARAMETERS['info']['webmaster_email']);
 
                 if ($hasEmailSent) {
-                    $feedback = gdrcd_filter('out', $MESSAGE['warning']['modified']);
+                    $feedback = gdrcd_filter('out', $MESSAGE['homepage']['resetOK']);
                 } else {
                     $feedback = gdrcd_filter('out', $MESSAGE['warning']['cant_do']);
                 }

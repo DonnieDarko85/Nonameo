@@ -67,8 +67,8 @@ div.ritratto {
 
 div.ritratto .iscritto_da {
     position: relative;
-    left: 450px;
-    top: -140px;
+    /* left: 450px; */
+    top: 25px;
     background: #fdf5e6;
     /* border: 2px solid #d2b48c; */
     padding: 10px 20px;
@@ -87,8 +87,8 @@ div.ritratto .iscritto_da {
 
 div.ritratto .ultimo_ingresso {
     position: relative;
-    left: 400px;
-    top: -138px;
+    /* left: 400px; */
+    top: 25px;
     background: #fdf5e6;
     /* border: 2px solid #d2b48c; */
     padding: 10px 20px;
@@ -261,7 +261,6 @@ div.menu_scheda {
 /*Box abilitÃ */
 div.elenco_abilita {
     margin: 10px auto 5px auto;
-    clear: both;
 }
 
 div.elenco_abilita table {
@@ -299,6 +298,21 @@ div.abilita_scheda_sub {
 
 div.modifica_scheda {
     margin: 10px;
+}
+
+/****************************************************************************/
+
+/****************************************************************************/
+/* STILE DELLA PAGINA DI SCHEDA SE DENTRO MODALE */
+
+div.pagina_scheda_modale {
+    margin: 5px 3px 20px 5px;
+    float: right;
+    font-size: 12px;
+    width: 350px;
+    position: relative;
+    left: -77px;
+    top: 30px;
 }
 
 /****************************************************************************/

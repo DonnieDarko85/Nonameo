@@ -1,4 +1,11 @@
-<div class="pagina_scheda_storia">
+<?php
+
+require_once('../includes/required.php');
+require_once('../plugins/bbdecoder/bbdecoder.php');
+
+?>
+
+<div class="pagina_scheda_storia pagina_scheda_modale">
     <?php /*HELP: */
     //Se non e' stato specificato il nome del pg
     if(isset($_REQUEST['pg']) === false) {
@@ -64,10 +71,6 @@
                     echo gdrcd_html_filter($personaggio['affetti']);
                 } ?>
             </div>
-        </div>
-        <!-- Link a piè di pagina -->
-        <div class="link_back">
-            <a href="main.php?page=scheda&pg=<?php echo gdrcd_filter('url', $_REQUEST['pg']); ?>"><?php echo gdrcd_filter('out', $MESSAGE['interface']['sheet']['link']['back']); ?></a>
         </div>
     </div>
 

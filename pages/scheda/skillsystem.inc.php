@@ -18,7 +18,7 @@ $px_totali_pg = gdrcd_filter('int', $personaggio['esperienza']) ;
 
 
 ?>
-<div class="elenco_abilita"><!-- Elenco abilità -->
+<div class="elenco_abilita pagina_scheda_modale"><!-- Elenco abilità -->
     <div class="titolo_box">
         <?php echo gdrcd_filter('out', $MESSAGE['interface']['sheet']['box_title']['skills']); ?>
     </div>

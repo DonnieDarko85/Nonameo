@@ -1,5 +1,9 @@
 <div class="pagina_scheda_storia">
     <?php /*HELP: */
+ 
+    require_once('../includes/required.php');
+    require_once('../plugins/bbdecoder/bbdecoder.php');
+
     //Se non e' stato specificato il nome del pg
     if(isset($_REQUEST['pg']) === false) {
         echo gdrcd_filter('out', $MESSAGE['error']['unknonw_character_sheet']);
@@ -37,10 +41,6 @@
                         echo gdrcd_html_filter($personaggio['storia']);
                     } ?>
         </div>
-        </div>
-        <!-- Link a piè di pagina -->
-        <div class="link_back">
-            <a href="main.php?page=scheda&pg=<?php echo gdrcd_filter('url', $_REQUEST['pg']); ?>"><?php echo gdrcd_filter('out', $MESSAGE['interface']['sheet']['link']['back']); ?></a>
         </div>
     </div>
 </div><!-- Pagina -->
