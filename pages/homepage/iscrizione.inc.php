@@ -63,16 +63,7 @@
                             <div class="form_info">
                                 <?php echo gdrcd_filter('out', $MESSAGE['register']['fields']['name_info']); ?>
                             </div>
-                            <!-- Cognome PG -->
-                            <!--<div class="form_label">
-                                <?php/* echo gdrcd_filter('out', $MESSAGE['register']['fields']['lastname']); ?>
-                            </div>
-                            <div class="form_field">
-                                <input name="cognome" value="<?php echo gdrcd_filter('out', $_POST['cognome']); ?>"/>
-                            </div>
-                            <div class="form_info">
-                                <?php echo gdrcd_filter('out', $MESSAGE['register']['fields']['name_info']); */?>
-                            </div>-->
+
                             <!-- Genere -->
                             <div class="genere">
                             <div class="form_label">
