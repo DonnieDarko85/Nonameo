@@ -140,7 +140,7 @@ if((gdrcd_filter_get($_REQUEST['chat']) == 'yes') && (empty($_SESSION['login']) 
             $exp_bonus = ($PARAMETERS['settings']['exp_by_chat']['value'] == '0') ? $msg_length / $char_needed : gdrcd_filter_num($PARAMETERS['settings']['exp_by_chat']['value']);
         }
 
-        if($type < "5") {
+        if($type < "5"  || $type == "8") {
             if( ! empty($_POST['message'])) {
                 //E' un messaggio.
                 /*Verifico il tipo di messaggio*/
@@ -206,6 +206,14 @@ if((gdrcd_filter_get($_REQUEST['chat']) == 'yes') && (empty($_SESSION['login']) 
                 } elseif(($type == "3") && ($_SESSION['permessi'] >= GAMEMASTER)) { /*PNG*/
                     $m_type = 'N';
                     $_SESSION['tag'] = $tag_n_beyond;
+                }  elseif(($type == "8") || ($first_char == "/")) { /*SUSSURRY*/
+                    $m_type = 'X';
+                    if(($first_char == "/")) {
+                        $chat_message = substr($chat_message, 1);
+                    } elseif($first_char == "|") {
+                        $chat_message = substr($chat_message, 1);
+                        $m_type = 'I';
+                    }
                 } else {
                     if(($type == "0") || (empty($type) === true)) { /*Parlato*/
                         if($actual_healt['salute'] > 0) {
@@ -376,6 +384,11 @@ if((gdrcd_filter_get($_REQUEST['chat']) == 'yes') && (empty($_SESSION['login']) 
                 $add_chat .= '<span class="chat_time">'.gdrcd_format_time($row['ora']).'</span>';
                 $add_chat .= '<span class="chat_msg">'.gdrcd_filter('out', $row['testo']).'</span>';
                 break;
+            case 'X':
+    			$add_chat .= '<span class="chat_time">'.gdrcd_format_time($row['ora']).'</span> ';
+    			$add_chat .= '<span class="chat_name">Messaggio OFF da '.$row['mittente'].'</span>: ';
+    			$add_chat .= '<span class="chat_msg">'.gdrcd_filter('out', $row['testo']).'</span>';
+    			break;
         }
         $add_chat .= '</div>';
 

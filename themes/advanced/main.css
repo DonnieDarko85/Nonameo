@@ -34,6 +34,8 @@
     background: linear-gradient(180deg, #7b6752, #3b3b3b);
   }
   
+
+  
   /* Per Firefox */
   * {
     scrollbar-width: thin;
@@ -687,9 +689,9 @@ td.casella_titolo .elementi_elenco {
 
 div.titoli_elenco,
 span.titoli_elenco {
-    font-weight: bold;
-    font-size: 12px;
-    font-style: italic;
+    font-size: 16px;
+    font-family: 'Special Elite';
+    text-align: center;
 }
 
 td.casella_razza_immagine {
@@ -1095,4 +1097,89 @@ div.pagina_iscrizione > div.page_body {
 .razza{
     display: inline-block !important;
     margin-left: 30px !important;
+}
+
+.due_colonne_abilita {
+    position: relative;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    gap: 2em;
+}
+
+.colonna_abilita {
+    width: 50%;
+}
+
+.colonna_abilita h3 {
+    color: #3b3b3b;
+    letter-spacing: 0.05em;
+    font-family: 'Special Elite', monospace;
+    line-height: 1.6;
+    transform: rotate(0deg);
+    text-shadow: 1px 1px 1px #c3c3a9;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
+
+.colonna_abilita table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.colonna_abilita td {
+    padding: 0px;
+    color: #e3e3c8;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Special Elite';
+    letter-spacing: 1px;
+}
+
+.div_colonne_abilita_scheda {
+    width: 380px;
+    height: 295px;
+    position: relative;
+    overflow: auto;
+    left: -25px;
+    top: -11px;
+    padding: 0 12px scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.pagina_scheda .div_colonne_abilita_scheda a {
+    padding: 5px !important;
+    letter-spacing: 1px !important;
+    color: #000 !important;
+    background: transparent !important;
+    text-shadow: none;
+}
+
+.pagina_scheda .elenco_abilita .form_info
+ {
+    font-style: normal;
+    font-family: 'Special Elite';
+    color: #333;
+}
+
+
+.due_colonne_abilita_scheda::-webkit-scrollbar {
+    width: 0px !important; /* Per Chrome, Safari e Opera */
+}
+
+/*LAVORI & GILDE*/
+.pagina_servizi_lavoro .icone_elenco {
+    text-align: right;
+}
+
+.pagina_servizi_lavoro .casella_elemento {
+    font-family: 'Bitter';
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.pagina_servizi_lavoro .casella_elemento .titoli_elenco {
+    font-family: 'Special Elite';
+    font-size: 14px;
+    letter-spacing: 1px;
 }

@@ -14,7 +14,7 @@ div.pagina_scheda {
     /* margin-right: auto; */
     width: 1000px;
     height: 560px;
-    background: url(https://nonamegdr.altervista.org/themes/advanced/imgs/menu/sfondo-scheda-def.png);
+    background: url(https://nonamegdr.altervista.org/themes/advanced/imgs/menu/sfondo-scheda-def2.png);
     font-size: 10px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -31,10 +31,18 @@ div.pagina_scheda div.pagebody {
 }
 
 div.pagina_scheda a {
-    /*font-weight: normal;*/
     background: #333 !important;
     padding: 5px !important;
     letter-spacing: 1px !important;
+    margin: 2px;
+    border-radius: 10px 10px 0px 0px;
+    line-height: 4px;
+    text-align: center;
+    color: #fff8dc;
+    font-weight: 300;
+    font-size: 10px;
+    display: inline-block;
+    height: 5px;
 }
 
 div.pagina_scheda div.form_info {
@@ -68,41 +76,44 @@ div.ritratto {
 div.ritratto .iscritto_da {
     position: relative;
     /* left: 450px; */
-    top: 25px;
-    background: #fdf5e6;
+    top: 19px;
+    /* background: #fdf5e6; */
     /* border: 2px solid #d2b48c; */
     padding: 10px 20px;
     /* border-radius: 2px; */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #4b3b2a;
+    /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.1); */
+    color: #fff8dc;
     display: inline-block;
     text-align: center;
-    text-shadow: 1px 1px 0 #fff8dc;
-    font-weight: bold;
-    letter-spacing: 2px;
+    /* text-shadow: 1px 1px 0 #fff8dc; */
+    font-weight: 400;
+    letter-spacing: 3px;
     line-height: 3px;
     transform: rotate(359deg);
     font-family: 'Bitter';
+    text-shadow: 1px 1px 1px black;
+    font-size: 9px;
 }
 
 div.ritratto .ultimo_ingresso {
     position: relative;
-    /* left: 400px; */
-    top: 25px;
-    background: #fdf5e6;
+    left: -19px;
+    top: 8px;
+    /* background: #fdf5e6; */
     /* border: 2px solid #d2b48c; */
     padding: 10px 20px;
     /* border-radius: 2px; */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #4b3b2a;
+    color: #fff8dc;
     display: inline-block;
     text-align: center;
-    text-shadow: 1px 1px 0 #fff8dc;
-    font-weight: bold;
+    text-shadow: 1px 1px 0 #000;
+    font-weight: 400;
     letter-spacing: 2px;
     line-height: 3px;
-    transform: rotate(2deg);
+    /* transform: rotate(2deg); */
     font-family: 'Bitter';
+    font-size: 9px;
 }
 
 div.ritratto div.ritratto_invia_messaggio {
@@ -168,8 +179,8 @@ div.profilo {
     font-size: 12px;
     width: 350px;
     position: relative;
-    left: -77px;
-    top: 30px;
+    left: -85px;
+    top: 60px;
 }
 
 div.profilo div.profilo_voce {
@@ -254,8 +265,11 @@ div.menu_scheda {
     float: right;
     text-align: center;
     font-size: 12px;
-    width: 100%;
+    width: 700px;
     height: 30px;
+    position: relative;
+    left: 25px;
+    top: 50px;
 }
 
 /*Box abilitÃ */
@@ -306,13 +320,15 @@ div.modifica_scheda {
 /* STILE DELLA PAGINA DI SCHEDA SE DENTRO MODALE */
 
 div.pagina_scheda_modale {
-    margin: 5px 3px 20px 5px;
+    margin: 30px 3px 20px 5px;
     float: right;
     font-size: 12px;
     width: 350px;
     position: relative;
-    left: -77px;
-    top: 30px;
+    left: -85px;
+    top: 35px;
+    height: 350px;
+    color: #e3e3c8
 }
 
 /****************************************************************************/

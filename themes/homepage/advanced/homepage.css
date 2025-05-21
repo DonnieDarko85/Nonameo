@@ -169,7 +169,7 @@ div.login_form{
     position: relative;
     z-index: 4;
     left: 120px;
-    top: 170px;
+    top: 250px;
 }
 
 /** * stile che ingloba i gruppi label/input
@@ -328,7 +328,7 @@ top: 300px;
 font-weight: 500;
 letter-spacing: 1px;
 color: #888;
-
+display:none;
 }
 
 input#passrecovery {

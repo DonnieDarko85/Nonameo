@@ -22,15 +22,15 @@ div.chat_window {
 	* @author Blancks
 */
 div.chat_box {
-    position: absolute;
+	position: absolute;
     top: 1px;
-    bottom: 130px;
+    bottom: 150px;
     left: 3px;
     right: 10px;
     overflow: auto;
     font-size: 16px;
     text-align: left;
-    background: #a19c7b;
+    background: url(/themes/advanced/imgs/bg-chat.jpg);
     border: 7px dashed black;
     text-align: justify;
     font-weight: 400;
@@ -42,7 +42,7 @@ div.pagina_frame_chat div.page_body div.panels_box {
     left: 0;
     right: 5px;
     width: 942px;
-    background: url(https://nonamegdr.altervista.org/themes/advanced/imgs/sfondo-pannello-chat-bw.png) !important;
+    background: url(/themes/advanced/imgs/sfondo-pannello-chat-bw.png) !important;
     text-align: center;
     margin: auto;
     background-size: 100% !important;
@@ -77,8 +77,9 @@ div.chat_row_A span.color2 {
 }
 
 div.chat_row_P {
-    margin-top: 3px;
+    margin: 9px;
     padding: 10px;
+    background: #a19c7b90;
 }
 
 div.chat_row_P span.color2 {
@@ -87,19 +88,48 @@ div.chat_row_P span.color2 {
     font-weight: bolder;
 }
 
+div.chat_row_X {
+    padding: 0px 10px;
+    color: #000;
+}
+
+div.chat_row_X span.color2 {
+    color: #000;
+    font-weight: 400 !important;
+    font-family: 'Special Elite';
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.chat_row_X .chat_name, .chat_row_X .chat_msg {
+    color: #000;
+    font-weight: 400;
+    font-family: 'Special Elite';
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+
 div.chat_row_M {
     margin-top: 3px;
     border-width: 2px;
-    border-color: green;
     border-style: solid;
-    text-align: center;
-    color: green;
+    text-align: justify;
+    background: #444;
+    color:#a19c7b;
+    font-family: 'Special Elite';
+    font-size: 13px;
+    border: 1px solid black;
+    padding: 20px 40px;
+    line-height: 20px;
 }
 
 div.chat_row_M span.color2 {
     margin-top: 3px;
-    color: #000;
-    font-weight: bolder;
+    color: #999;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px black;
 }
 
 div.chat_row_N {
@@ -131,9 +161,9 @@ div.chat_row_D {
 div.chat_row_C {
     margin-top: 3px;
     border-width: 2px;
-    border-color: blue;
-    border-style: solid;
-    color: cyan;
+    background: #999;
+    text-shadow: 1px 1px 1px #d2b48c;
+    padding: 4px;
 }
 
 span.chat_time {
@@ -143,11 +173,11 @@ span.chat_time {
 }
 
 span.chat_name {
-    font-weight: bolder;
-    font-size: 12px;
+	font-weight: 400;
+    font-size: 16px;
     color: #000;
     letter-spacing: 2px;
-    font-family: 'ElliotSix', sans-serif;
+    font-family: 'Special Elite';
     text-shadow: 1px 1px 1px black;
 }
 
@@ -184,13 +214,14 @@ div.casella_chat {
 
 /*Casella Tag*/
 input#tag {
-    width: 103px;
+    width: 100px;
+    margin-left: 13px;
 }
 
 /*Casella Messaggio*/
-input#message {
-    width: 600px;
-    height: 23px;
+textarea#message {
+    width: 520px;
+    height: 45px;
     position: relative;
     margin: auto;
     left: 11px;
@@ -210,7 +241,35 @@ div.casella_chat input[type='submit'] {
 div.form_chat {
     width: 881px;
     position: relative;
-    top: 55px;
-    left: 21px;
+    top: 60px;
+    left: 45px;
+}
+
+#dadoModal .casella_chat .casella_info {
+    color: #111;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: 'Special Elite';
+}
+
+.casella_chat select {
+	width: 100%;
+    height: 21px;
+}
+
+.casella_info {
+	color: #a19c7b;
+    position: relative;
+    font-family: 'Special Elite';
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.casella_chat a {
+	color: #a19c7b;
+    position: relative;
+    font-family: 'Special Elite';
+    font-size: 10px;
+    letter-spacing: 2px;
 }
 /****************************************************************************/

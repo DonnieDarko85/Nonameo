@@ -363,7 +363,7 @@ $PARAMETERS['mode']['exp_by_chat'] = 'OFF';
 //ON: abilita l'incremento dei punti esperienza tramite i caratteri scritti in chat.
 //OFF: disabilita l'incremento dei punti esperienza tramite i caratteri scritti in chat.
 
-$PARAMETERS['settings']['exp_by_chat']['number'] = '1000';
+$PARAMETERS['settings']['exp_by_chat']['number'] = '500';
 // Numero di caratteri necessari al fine di aggiungere punti esperienza.
 $PARAMETERS['settings']['exp_by_chat']['value'] = '0';
 //Numero di punti da assegnare quando si superano i caratteri necessari.
@@ -503,7 +503,7 @@ $PARAMETERS['mode']['spyprivaterooms'] = 'OFF';
 $PARAMETERS['mode']['chatsave'] = 'ON';
 //ON: E' abilitato il pulsante Salva chat.
 //OFF: E' disabilitato il pulsante Salva chat.
-$PARAMETERS['mode']['chatsavepvt'] = 'OFF';
+$PARAMETERS['mode']['chatsavepvt'] = 'ON';
 //ON: E' abilitato il pulsante Salva chat per le chat private, SCONSIGLIATO.
 //OFF: E' disabilitato il pulsante Salva chat per le chat private.
 $PARAMETERS['mode']['chatsave_link'] = 'ON';
