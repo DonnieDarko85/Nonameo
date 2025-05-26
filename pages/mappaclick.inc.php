@@ -207,3 +207,21 @@ if(gdrcd_query($result, 'num_rows') == 0) {
     echo '</div>';//Pagina
 }//else
 ?>
+
+<div id="sottoluoghi" style="display:none; position:absolute; z-index:1000;"></div>
+
+<script>
+$(document).ready(function(){
+    $('.luogo_mappa.clickable').on('click', function(e){
+        var sottoluoghi = $(this).data('sottoluoghi');
+        if(sottoluoghi){
+            $('#sottoluoghi').html(sottoluoghi).fadeIn();
+            e.stopPropagation();
+        }
+    });
+
+    $(document).on('click', function(){
+        $('#sottoluoghi').fadeOut();
+    });
+});
+</script>

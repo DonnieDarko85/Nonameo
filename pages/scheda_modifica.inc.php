@@ -236,7 +236,7 @@
                                         $record['storia']); ?></textarea>
                             </div>
                             <div class="form_info">
-                                <?php echo gdrcd_filter('out', $MESSAGE['interface']['help']['bbcode']); ?>
+                                <?php echo gdrcd_filter('out', $MESSAGE['interface']['help']['dimensioniScheda']); ?>
                             </div>
 
                             <div class='form_label'>

@@ -25,6 +25,7 @@
             $personaggio = gdrcd_query("SELECT storia FROM personaggio WHERE nome = '".gdrcd_filter('in', $_REQUEST['pg'])."'");
              ?>
             <div class="body_box">
+            	<div class="contenuto_utente">
                     <?php
                     /** * Html, bbcode o entrambi ?
                      * @author Blancks
@@ -40,6 +41,7 @@
                     } else {
                         echo gdrcd_html_filter($personaggio['storia']);
                     } ?>
+             </div>
         </div>
         </div>
     </div>

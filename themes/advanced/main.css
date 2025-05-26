@@ -73,7 +73,7 @@ div.innertube ul li {
 }
 
 a, a:visited {
-    color: #899895;
+    color: #999;
     text-decoration: none;
 }
 
@@ -186,15 +186,19 @@ div.link_back a:hover{
 
 /** * Logout */
 div.logout_box {
+    width: 670px;
     margin: 20px auto;
-    padding: 10px;
+    padding: 30px;
     text-align: center;
-    background-color: #D9D9D9;
-    border: solid 1px #333;
-    -moz-border-radius: 5px; /* Bordi arrotondati */
+    /* background-color: #a19c7b; */
+    /* border: dashed 5px #000; */
+    -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -khtml-border-radius: 5px;
     border-radius: 5px;
+    font-family: 'Special Elite';
+    position: relative;
+    top: 170px;
 }
 
 div.logout_box a {
@@ -558,10 +562,10 @@ div.link_menu a.sprite:hover {
 /** * Posizionamento mappa cliccabile 
 */
 div.mappaclick_map {
-    margin: 20px auto;
+    margin: 8px auto;
     background: url(https://nonamegdr.altervista.org/themes/advanced/imgs/maps/mappa_funny.png) no-repeat top center !important;
-    width: 68vw !important;
-    height: 82vh !important;
+    width: 1050px !important;
+    height: 640px !important;
     background-size: 85% !important;
 }
 
@@ -1182,4 +1186,100 @@ div.pagina_iscrizione > div.page_body {
     font-family: 'Special Elite';
     font-size: 14px;
     letter-spacing: 1px;
+}
+
+.presente_descrizione {
+    font-family: 'Bitter', sans-serif;
+    font-size: 10px;
+    width: 300px;
+    background: #a19c7b;
+    position: relative;
+    left: 20px;
+    color: #444;
+    /* border: 1px dashed black; */
+    padding: 4px;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 3px #00000080;
+}
+
+div.pagina_schedam_odifica div.form_gioco .form_info {
+    position: relative;
+    font-family: 'Bitter', sans-serif;
+    color: #999;
+    font-weight: 400;
+}
+
+        .logout_body {
+    color: #a19c7b;
+    font-family: serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px black;
+        }
+
+
+        .logout_text {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .frase-container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .frase-italiano {
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+            color: #d7d7d7;
+            pointer-events: none;
+        }
+
+        .frase-stramba {
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            display: inline-block;
+        }
+
+        .frase-container:hover .frase-stramba {
+            opacity: 0;
+            transform: scale(0.95) rotate(-2deg);
+            filter: blur(1px);
+        }
+
+        .frase-container:hover .frase-italiano {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .logout_link {
+            letter-spacing: 2px;
+            text-decoration: none !important;
+            font-weight: bold;
+            text-transform:uppercase;
+            font-style: normal !important;
+        }
+
+        .logout_link:hover {
+            color: #666 !important;
+            letter-spacing: 5px;
+            animation: spookyTremor 0.35s infinite !important;
+        }
+        
+.logout_background {
+width: 730px;
+height: 800px;
+margin: auto;
+position: relative;
+background: url(imgs/bg-logout-2.png);
+background-size: 100%;
+background-repeat: no-repeat;
 }

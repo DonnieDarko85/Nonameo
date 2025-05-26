@@ -847,3 +847,4 @@ $MESSAGE['interface']['forms']['save'] = 'Salva';
 $MESSAGE['interface']['pager']['pages_name'] = 'Pagine';
 /*Help*/
 $MESSAGE['interface']['help']['bbcode'] = 'BBCode: [b]Bold[/b], [i]Italic[/i], [u]Sottolineato[/u], [color=colore]Colorato[/color], [img]Indirizzo-immagine[/img].';
+$MESSAGE['interface']['help']['dimensioniScheda'] = 'Dimensioni max immagine di sfondo: 440 x 417px. Si può utilizzare il BBCode oppure il CSS inline. Altri tipi di stile sono vietati e non funzionanti.';

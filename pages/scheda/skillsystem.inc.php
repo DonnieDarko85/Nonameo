@@ -125,3 +125,4 @@ $px_totali_pg = gdrcd_filter('int', $personaggio['esperienza']);
         <?php echo gdrcd_filter('out', $MESSAGE['interface']['sheet']['info_skill_cost']); ?>
     </div>
 </div>
+

@@ -42,7 +42,7 @@ div.pagina_frame_chat div.page_body div.panels_box {
     left: 0;
     right: 5px;
     width: 942px;
-    background: url(/themes/advanced/imgs/sfondo-pannello-chat-bw.png) !important;
+    background: url(/themes/advanced/imgs/sfondo-specchietto-chat-def.png) !important;
     text-align: center;
     margin: auto;
     background-size: 100% !important;
@@ -241,8 +241,8 @@ div.casella_chat input[type='submit'] {
 div.form_chat {
     width: 881px;
     position: relative;
-    top: 60px;
-    left: 45px;
+	top: 48px;
+    left: 52px;
 }
 
 #dadoModal .casella_chat .casella_info {

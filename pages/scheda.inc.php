@@ -1,3 +1,4 @@
+
 <div class="pagina_scheda">
     <?php
     /* HELP: E' possibile modificare la scheda agendo su scheda.css nel tema scelto,
@@ -89,6 +90,57 @@
                     <img src="<?php echo !empty(gdrcd_filter('fullurl', $personaggio['url_img']))? $personaggio['url_img'] : '../imgs/avatar_empty.png' ?>" class="ritratto_avatar_immagine" />
           
                 </div>
+<?php
+$personaggio['url_media'] = gdrcd_filter('fullurl', $personaggio['url_media']);
+if ($PARAMETERS['mode']['allow_audio'] == 'ON' && !$_SESSION['blocca_media']) {
+
+    // Se vuoto, assegna traccia di default
+    if (empty($personaggio['url_media'])) {
+        $personaggio['url_media'] = '/imgs/suoni/nessun_brano.mp3'; // <-- traccia silenziosa o placeholder
+    }
+
+    // Sanifica il nome del personaggio per usarlo come ID JS
+    $pgSafe = preg_replace('/[^a-zA-Z0-9]/', '', $personaggio['nome']);
+    ?>
+    <div class="lettorino_mp3">
+        <audio id="player_<?php echo $pgSafe; ?>" style="display: none;" src="<?php echo $personaggio['url_media']; ?>" autoplay="true" preload="auto" loop="true"></audio>
+
+        <div class="lettorino_controls">
+            <button onclick="Games['<?php echo $pgSafe; ?>'].playPause()">
+                <img src="/imgs/icons/mp3_play.png" onmouseover="this.src='/imgs/icons/mp3_play_col.png';" onmouseout="this.src='/imgs/icons/mp3_play.png';">
+            </button>
+            <button onclick="Games['<?php echo $pgSafe; ?>'].changeVolume(-0.05)">
+                <img src="/imgs/icons/mp3_volumedown.png" onmouseover="this.src='/imgs/icons/mp3_volumedown_col.png';" onmouseout="this.src='/imgs/icons/mp3_volumedown.png';">
+            </button>
+            <button onclick="Games['<?php echo $pgSafe; ?>'].changeVolume(0.05)">
+                <img src="/imgs/icons/mp3_volumeup.png" onmouseover="this.src='/imgs/icons/mp3_volumeup_col.png';" onmouseout="this.src='/imgs/icons/mp3_volumeup.png';">
+            </button>
+        </div>
+    </div>
+
+    <script>
+        if (typeof Games === 'undefined') {
+            var Games = {};
+        }
+
+        Games['<?php echo $pgSafe; ?>'] = {
+            player: document.getElementById('player_<?php echo $pgSafe; ?>'),
+            playPause: function () {
+                if (this.player.paused) {
+                    this.player.play();
+                } else {
+                    this.player.pause();
+                }
+            },
+            changeVolume: function (val) {
+                let newVolume = this.player.volume + val;
+                newVolume = Math.min(Math.max(newVolume, 0), 1);
+                this.player.volume = newVolume;
+            }
+        };
+    </script>
+<?php } ?>
+
                 <div class="iscritto_da">
                     <?php echo gdrcd_filter('out', $MESSAGE['interface']['sheet']['first_login']).' '.gdrcd_format_date($personaggio['data_iscrizione']); ?>
                 </div>

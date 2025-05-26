@@ -8,6 +8,12 @@
 - Lo sfondo della finestra dei presenti */
 
 /*Frame dei presenti*/
+.pagina_presenti_estesa {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
 div.presenti iframe.iframe_presenti {
     width: 130px;
     height: 234px;
@@ -97,6 +103,38 @@ div.pagina_presenti_estesa ul.elenco_presenti {
     text-align: left;
 }
 
+div.pagina_presenti_estesa ul.elenco_presenti {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    top: 10px;
+}
+
+div.pagina_presenti_estesa .elenco_presenti li {
+    margin: 3px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.pagina_presenti_estesa .elenco_presenti li.presente {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #a19c7b;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-bottom: 10px; /* aumentato da 5px */
+    font-size: 1rem;      /* aumentato da valore implicito (~14px) */
+}
+
+
+
 /*Nomi dei luoghi*/
 div.pagina_presenti ul.elenco_presenti li.luogo,
 div.pagina_presenti_estesa ul.elenco_presenti li.luogo {
@@ -113,6 +151,8 @@ div.pagina_presenti_estesa ul.elenco_presenti li.mappa {
     text-transform: uppercase;
     font-family: 'ElliotSix';
     color: #a19c7b;
+    letter-spacing: 4px;
+    text-align: center;
 }
 
 /* Nomi dei personaggi */
@@ -124,10 +164,14 @@ div.pagina_presenti_estesa ul.elenco_presenti li.presente {
 
 div.pagina_presenti_estesa div.presenti_estesi {
     width: 800px;
+    height: 590px;
     position: relative;
     margin: auto;
     font-family: 'Bitter', sans-serif;
     font-size: 14px;
+    display: flex;
+    justify-content: center;
+    top: 20px;
 }
 
 /*Icone presenti*/
@@ -141,22 +185,33 @@ img.presenti_ico {
 div.pagina_presenti ul.elenco_presenti li.luogo, div.pagina_presenti_estesa ul.elenco_presenti li.luogo {
     font-size: 13px;
     font-weight: bold;
-    margin: 15px 0px;
+    margin: auto;
     text-transform: uppercase;
     font-family: 'Special Elite', monospace;
     letter-spacing: 2px;
     position: relative;
-    top: 5px;
+    /* top: 23px; */
+    width: 407px;
+    padding: 10px;
 }
 
 div.pagina_presenti ul.elenco_presenti li.presente, div.pagina_presenti_estesa ul.elenco_presenti li.presente
  {
-    font-size: 14px;
+    font-size: 12px;
     margin: 0 0 0 5px;
     font-family: 'Bitter', sans-serif;
     letter-spacing: 1px;
-    color: #999 !important;
     font-weight: 400;
+    /* background-color: #a19c7b; */
+    position: relative;
+    width: 389px;
+    margin: auto;
+    /* top: 20px; */
+    margin-bottom: 10px;
+    background: url(/themes/advanced/imgs/bg-chat.jpg);
+    text-shadow: 1px 1px 1px #a19c7b;
+    height: 40px;
+    padding: 10px;
 }
 
 div.pagina_presenti ul.elenco_presenti li.presente, div.pagina_presenti_estesa ul.elenco_presenti li.presente a:hover
@@ -181,4 +236,41 @@ div.pagina_presenti ul.elenco_presenti li.presente, div.pagina_presenti_estesa u
     position: relative;
     height: 187px;
     overflow: auto;
+}
+
+
+div.pagina_presenti_estesa .elenco_presenti .presente a,
+div.pagina_presenti_estesa .elenco_presenti .presente a:visited {
+    color: #111 !important;
+    font-family: 'Special Elite', sans-serif;
+    height: 7.5px;
+    vertical-align: bottom;
+    display: block;
+}
+
+.presente_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.presente_info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.miniavatar {
+    width: 40px;
+    height: 40px;
+    /* border-radius: 50%; */
+    object-fit: cover;
+    position: relative;
+    left: 14px;
+    box-shadow: 1px 1px 3px black;
+}
+
+div.pagina_presenti_estesa .page_title {
+    display: none;
 }

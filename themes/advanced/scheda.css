@@ -75,8 +75,8 @@ div.ritratto {
 
 div.ritratto .iscritto_da {
     position: relative;
-    /* left: 450px; */
-    top: 19px;
+    left: 258px;
+    top: -45px;
     /* background: #fdf5e6; */
     /* border: 2px solid #d2b48c; */
     padding: 10px 20px;
@@ -89,21 +89,23 @@ div.ritratto .iscritto_da {
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 3px;
-    transform: rotate(359deg);
+    /* transform: rotate(359deg); */
     font-family: 'Bitter';
     text-shadow: 1px 1px 1px black;
     font-size: 9px;
+    background: #333;
+    padding: 5px;
 }
 
 div.ritratto .ultimo_ingresso {
     position: relative;
-    left: -19px;
-    top: 8px;
+    left: 509px;
+    top: -60px;
     /* background: #fdf5e6; */
     /* border: 2px solid #d2b48c; */
     padding: 10px 20px;
     /* border-radius: 2px; */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.1); */
     color: #fff8dc;
     display: inline-block;
     text-align: center;
@@ -114,14 +116,15 @@ div.ritratto .ultimo_ingresso {
     /* transform: rotate(2deg); */
     font-family: 'Bitter';
     font-size: 9px;
+    background: #333;
+    padding: 5px;
 }
 
 div.ritratto div.ritratto_invia_messaggio {
     position: relative;
     left: 10px;
-    /* background: pink; */
-    top: -48px;
-    left: 91px;
+    top: -92px;
+    left: 50px;
 }
 
 /*Nome PG*/
@@ -151,20 +154,21 @@ div.ritratto div.ritratto_nome {
 
 /*Immagine*/
 div.ritratto div.ritratto_avatar {
-    width: 265px;
-    height: 425px;
+    width: 270px;
+    height: 430px;
     margin: 0;
     overflow: hidden;
     /* background: blue; */
     position: relative;
-    top: 9px;
-    left: -1px;
+    top: 4px;
+    left: -7px;
     transform: rotate(-4deg);
+    border: 3px solid #333;
 }
 
 div.ritratto_avatar img {
-    width: 265px;
-    height: 425px;
+    width: 270px;
+    height: 430px;
 }
 
 /*Link invia messaggio*/
@@ -583,4 +587,65 @@ div.pagina_scheda_oggetti form {
 
 .pagina_scheda_diario .fake-table .td:last-child{
     border-right: none;
+}
+
+.pagina_scheda_storia {
+	width: 440px;
+    height: 417px;
+    position: relative;
+    left: 512px;
+    top: 68px;
+}
+.pagina_scheda_storia .page_title {
+display: none;
+}
+.pagina_scheda_storia .body_box {
+width: 100%;
+    height: 100%;
+    column-count: 1;
+    position: absolute;
+    color: black;
+    font-weight: 400;
+    font-size: 12px;
+	overflow: auto;
+}
+
+.contenuto_utente {
+  white-space: normal; /* Forza andata a capo normale */
+  word-wrap: break-word; /* Permette di spezzare parole lunghe se serve */
+  overflow: auto;
+  max-width: 440px;
+  max-height: 417px;
+  font-family: 'Bitter', sans-serif;
+  font-size: 12px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0px; /* evita che il testo tocchi i bordi */
+}
+
+.lettorino_mp3 {
+    width: 130px;
+    height: 50px;
+    background: url(https://nonamegdr.altervista.org/imgs/mp3_sfondo.png);
+    background-size: 100%;
+    position: relative;
+    top: -10px;
+    left: -12px;
+    transform: rotate(5deg);
+}
+
+.lettorino_controls {
+    position: relative;
+    top: 16px;
+    left: -1px;
+}
+
+.lettorino_mp3 button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.lettorino_mp3 button img {
+    height: 17px;
 }
