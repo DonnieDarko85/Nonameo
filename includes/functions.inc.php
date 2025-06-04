@@ -944,3 +944,8 @@ function gdrcd_brute_debug($args)
     }
     die('FINE');
 }
+
+function gdrcd_filter_html($text) {
+    // Permetti solo alcuni tag HTML sicuri
+    return strip_tags($text, '<a><b><i><u><br><strong><em>');
+}

@@ -1,3 +1,4 @@
+<script type="text/javascript" src="/includes/tooltip.js"></script>
 <?php /*HELP: */
 /*Aggiorno la mappa corrente del PG*/
 $current_map = (isset($_GET['map_id']) === true) ? gdrcd_filter('num', $_GET['map_id']) : $_SESSION['mappa'];
