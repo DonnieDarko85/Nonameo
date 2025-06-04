@@ -274,7 +274,10 @@ div.colonne_sx .pagina_link_menu > .page_body {
     left: 23px;
 }
 
-div.pagina_presenti > .page_title > h2,
+div.pagina_presenti > .page_title > h2 {
+    display: none;
+}
+
 div.pagina_mappaclick > .page_title > h2 {
     display: none;
 }
@@ -599,18 +602,37 @@ div#descriptionLoc {
 /** * Stili relativi all'elenco delle mappe in basso
 */
 div.mappaclick_more {
-    padding-top: 10px;
-    display: none;
+    /* padding-top: 10px; */
+    display: block;
+    position: relative;
+    top: -296px;
 }
 
 div.mappaclick_more a {
-    background-color: #cfcfcf;
-    padding: 8px;
+    background-color: #a19c7b;
+    padding: 3px;
     margin-right: 10px;
-    -moz-border-radius: 5px; /* Bordi arrotondati */
-    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    /* -webkit-border-radius: 5px; */
     -khtml-border-radius: 5px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    color: black;
+    font-family: 'Special Elite';
+    letter-spacing: 2px;
+    line-height: 0px;
+    box-shadow: 1px 1px 3px black;
+}
+
+div.mappaclick_more a:hover {
+    background-color: #999;
+    padding: 3px;
+    margin-right: 10px;
+    color: black;
+    font-family: 'Special Elite';
+    letter-spacing: 2px;
+    line-height: 0px;
+    box-shadow: 1px 1px 3px black;
+    transform:rotate(2deg);
 }
 
 /** * Messages center
