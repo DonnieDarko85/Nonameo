@@ -1,5 +1,5 @@
-<!--CONFIG INC-->
 <?php
+/*CONFIG INC*/
 /**
  * CONFIGURAZIONE DI GDRCD 5.5
  * @author MrFaber
