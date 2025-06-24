@@ -575,7 +575,15 @@ div.mappaclick_map {
 /** * Link testuali sulla mappa */
 div.mappaclick_map a {
     font-size: 13px;
-    font-weight: bolder;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Special Elite';
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    color: #fff;
+    background: #111 !important;
+    /* transform: rotate(45deg) !important; */
 }
 
 /** * stile della tooltip di descrizione sulla mappa 
