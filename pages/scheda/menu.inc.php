@@ -31,12 +31,14 @@ if (($pg == $me) || ($permessi >= GUILDMODERATOR)) { ?>
     <a href="main.php?page=scheda_gst&pg=<?=$pg;?>">
         <?php echo gdrcd_filter('out', $MESSAGE['interface']['sheet']['menu']['gst']); ?>
     </a>
+<?php } ?>
 
 <script>
 
     $('.menu-link').on('click', function(e) {
         e.preventDefault();
         const url = $(this).data('url');
+        console.log('Caricamento URL:', url);
         caricaContenuto(url);
     });
 
@@ -47,4 +49,3 @@ if (($pg == $me) || ($permessi >= GUILDMODERATOR)) { ?>
 
 </script>
 
-<?php }
