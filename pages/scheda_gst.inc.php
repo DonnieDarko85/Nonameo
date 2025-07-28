@@ -274,10 +274,4 @@
 
 
     </div>
-    <!-- Link a piè di pagina -->
-    <div class="link_back">
-        <a href="main.php?page=scheda&pg=<?php echo gdrcd_filter('url',
-            $_REQUEST['pg']); ?>"><?php echo gdrcd_filter('out', $MESSAGE['interface']['sheet']['link']['back']); ?></a>
-    </div>
-
 </div><!-- pagina -->

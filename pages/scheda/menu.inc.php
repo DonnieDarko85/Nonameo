@@ -6,7 +6,7 @@ $permessi  = gdrcd_filter('out',$_SESSION['permessi']);
 
 # Modifica
 if (($pg == $me) || ($permessi >= GUILDMODERATOR)) { ?>
-        <a href="main.php?page=scheda_modifica&pg=<?=$pg;?>">
+        <a href="#" class="menu-link" data-url="pages/scheda_modifica.inc.php?page=scheda_modifica&pg=<?=urlencode($pg);?>">
             <?php echo gdrcd_filter('out', $MESSAGE['interface']['sheet']['menu']['update']); ?>
         </a>
 <?php } ?>
@@ -28,7 +28,7 @@ if (($pg == $me) || ($permessi >= GUILDMODERATOR)) { ?>
 <?php if ($permessi >= MODERATOR) { ?>
 
     <!-- AMMINISTRA -->
-    <a href="main.php?page=scheda_gst&pg=<?=$pg;?>">
+    <a href="#" class="menu-link" data-url="main.php?page=scheda_gst&pg=<?=urlencode($pg);?>">
         <?php echo gdrcd_filter('out', $MESSAGE['interface']['sheet']['menu']['gst']); ?>
     </a>
 <?php } ?>
